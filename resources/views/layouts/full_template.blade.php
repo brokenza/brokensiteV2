@@ -7,11 +7,11 @@
 <!-- Mirrored from seantheme.com/admetro/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Nov 2019 04:32:35 GMT -->
 <head>
 	<meta charset="utf-8" />
-	<title>Admetro | Dashboard</title>
+	<title>LaravelApp | {{ $title }}</title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
-	
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<!-- ================== BEGIN BASE CSS STYLE ================== -->
 	<link href="{{ asset("assets/css/app.min.css") }}" rel="stylesheet" />
 	<!-- ================== END BASE CSS STYLE ================== -->
@@ -30,7 +30,7 @@
 			<!-- BEGIN navbar-header -->
 			<div class="navbar-header">
 				<a href="index-2.html" class="navbar-brand">
-					admetro
+				LaravelApp
 				</a>
 				<button type="button" class="navbar-toggle" data-click="sidebar-toggled">
 					<span class="icon-bar"></span>
@@ -91,7 +91,7 @@
 						</li>
 						<li class="dropdown-message">
 							<a href="#">
-								<div class="icon"><div class="img" style="background-image: url(assets/img/user-2.jpg)"></div></div>
+								<div class="icon"><div class="img" style="background-image: url(/assets/img/user-2.jpg)"></div></div>
 								<div class="info">
 									<h4 class="title">Corey  <span class="time">10:20am</span></h4>
 									<p class="desc">There's so much room for activities!</p>
@@ -171,7 +171,7 @@
 				<li class="nav-item dropdown">
 					<a href="#" data-toggle="dropdown" data-display="static" class="nav-link">
 						<span class="nav-img online">
-							<img src="assets/img/user.jpg" alt="" />
+							<img src="{{ asset("/assets/img/user.jpg") }}" alt="" />
 						</span>
 						<span class="d-none d-md-block">John Smith <b class="caret"></b></span>
 					</a>
@@ -208,7 +208,7 @@
 				<ul class="nav">
 					<li class="nav-profile">
 						<div class="profile-img">
-							<img src="assets/img/user.jpg" />
+							<img src="{{ asset("/assets/img/user.jpg") }}" />
 						</div>
 						<div class="profile-info">
 							<h4>John Smith</h4>
@@ -260,7 +260,7 @@
 							<li><a href="ui_buttons.html"><span class="nav-text">Buttons</span></a></li>
 							<li><a href="ui_typography.html"><span class="nav-text">Typography</span></a></li>
 							<li><a href="ui_tabs_accordions.html"><span class="nav-text">Tabs & Accordions</span></a></li>
-							<li><a href="ui_modal_notification.html"><span class="nav-text">Modal & Notification</span></a></li>
+							<!-- <li><a href="ui_modal_notification.html"><span class="nav-text">Modal & Notification</span></a></li> -->
 							<li><a href="ui_card.html"><span class="nav-text">Card</span></a></li>
 							<li><a href="ui_icons.html"><span class="nav-text">Icons</span></a></li>
 						</ul>
@@ -389,24 +389,11 @@
 
 	<!-- END theme-panel -->
 	
-	<!-- ================== BEGIN BASE JS ================== -->
-	<script src="{{ asset("/assets/js/app.min.js") }}"></script>
-	<!-- ================== END BASE JS ================== -->
-	
-	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
-	<script src="{{ asset("/assets/js/demo/dashboard.demo.js") }}"></script>
-	<!-- ================== END PAGE LEVEL JS ================== -->
-{{-- 	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-53034621-1', 'auto');
-	  ga('send', 'pageview');
+	@yield('page-js-files')
+    @yield('page-js-script')
 
-	</script> --}}
+
 </body>
 
-<!-- Mirrored from seantheme.com/admetro/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Nov 2019 04:32:35 GMT -->
 </html>

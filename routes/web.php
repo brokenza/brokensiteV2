@@ -14,9 +14,12 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/users', function () {
+/* Route::get('/users', function () {
     return view('pages/users/usermanagement');
-});
-Route::get('/users/create', function () {
-    return view('pages/users/create');
-});
+}); */
+// Route::get('/users/create', function () {
+//     return view('pages/users/create');
+// });
+
+Route::resource('users', 'UsersController');
+//Route::resource('users/create', 'UsersController@');
