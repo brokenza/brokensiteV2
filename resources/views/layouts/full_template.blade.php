@@ -1,10 +1,6 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
-<!--[if !IE]><!-->
-<html lang="en">
-<!--<![endif]-->
 
-<!-- Mirrored from seantheme.com/admetro/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Nov 2019 04:32:35 GMT -->
+<html lang="en">
 <head>
 	<meta charset="utf-8" />
 	<title>Admetro | Dashboard</title>
@@ -200,8 +196,6 @@
 			</div>
 			<!-- END navbar-search -->
 		</header>
-		<!-- END #header -->
-		
 
 		<sidebar id="sidebar" class="app-sidebar">
 			<div data-scrollbar="true" data-height="100%">
@@ -378,35 +372,16 @@
 			<!-- END row -->
 		</div>
 		<!-- END #content -->
-		
+	
 		<!-- BEGIN btn-scroll-top -->
 		<a href="#" data-click="scroll-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
 		<!-- END btn-scroll-top -->
 	</div>
-	<!-- END #app -->
-	
-	<!-- BEGIN theme-panel -->
 
-	<!-- END theme-panel -->
-	
-	<!-- ================== BEGIN BASE JS ================== -->
+
 	<script src="{{ asset("/assets/js/app.min.js") }}"></script>
-	<!-- ================== END BASE JS ================== -->
-	
-	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
-	<script src="{{ asset("/assets/js/demo/dashboard.demo.js") }}"></script>
-	<!-- ================== END PAGE LEVEL JS ================== -->
-{{-- 	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-53034621-1', 'auto');
-	  ga('send', 'pageview');
-
-	</script> --}}
+	<script src="assets/js/demo/dashboard.demo.js"></script>
+	{{-- <script src="{{ asset("/assets/js/notification/noti.js") }}"></script> --}}
 </body>
 
-<!-- Mirrored from seantheme.com/admetro/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Nov 2019 04:32:35 GMT -->
-</html>
+ </html>

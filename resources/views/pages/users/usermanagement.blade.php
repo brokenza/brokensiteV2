@@ -169,7 +169,12 @@
                 </tr>
             </tbody>
         </table>
+        <button onclick="myFunction()">Copy Text</button>
+        <button  class="btn btn-silver btn-xs" onclick="myFunction()"><i class="fa fa-times"></i></button>
     </div>
 </div>
-
 @endsection
+@section('javascript')
+    
+    <script src="{{ asset("/assets/js/notification/noti.js") }}"></script>
+@stop

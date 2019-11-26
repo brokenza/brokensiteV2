@@ -12,6 +12,7 @@
     <div class="col-lg-12">
         <!-- BEGIN card -->
         <div class="card m-b-15">
+                <form action="register" method="post">
             <!-- BEGIN card-header -->
             <div class="card-header card-header-inverse">
                 <h4 class="card-header-title">Form Input data user</h4> 
@@ -59,6 +60,7 @@
 
             </div>
             <!-- END card-body -->
+                </form>
         </div>
     </div>
     <!-- END col-4 -->
