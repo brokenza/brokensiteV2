@@ -3,11 +3,11 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>Admetro | Dashboard</title>
+	<title>LaravelApp | {{ $title }}</title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
-	
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<!-- ================== BEGIN BASE CSS STYLE ================== -->
 	<link href="{{ asset("assets/css/app.min.css") }}" rel="stylesheet" />
 	<!-- ================== END BASE CSS STYLE ================== -->
@@ -26,7 +26,7 @@
 			<!-- BEGIN navbar-header -->
 			<div class="navbar-header">
 				<a href="index-2.html" class="navbar-brand">
-					admetro
+				LaravelApp
 				</a>
 				<button type="button" class="navbar-toggle" data-click="sidebar-toggled">
 					<span class="icon-bar"></span>
@@ -87,7 +87,7 @@
 						</li>
 						<li class="dropdown-message">
 							<a href="#">
-								<div class="icon"><div class="img" style="background-image: url(assets/img/user-2.jpg)"></div></div>
+								<div class="icon"><div class="img" style="background-image: url(/assets/img/user-2.jpg)"></div></div>
 								<div class="info">
 									<h4 class="title">Corey  <span class="time">10:20am</span></h4>
 									<p class="desc">There's so much room for activities!</p>
@@ -167,7 +167,7 @@
 				<li class="nav-item dropdown">
 					<a href="#" data-toggle="dropdown" data-display="static" class="nav-link">
 						<span class="nav-img online">
-							<img src="assets/img/user.jpg" alt="" />
+							<img src="{{ asset("/assets/img/user.jpg") }}" alt="" />
 						</span>
 						<span class="d-none d-md-block">John Smith <b class="caret"></b></span>
 					</a>
@@ -202,7 +202,7 @@
 				<ul class="nav">
 					<li class="nav-profile">
 						<div class="profile-img">
-							<img src="assets/img/user.jpg" />
+							<img src="{{ asset("/assets/img/user.jpg") }}" />
 						</div>
 						<div class="profile-info">
 							<h4>John Smith</h4>
@@ -254,7 +254,7 @@
 							<li><a href="ui_buttons.html"><span class="nav-text">Buttons</span></a></li>
 							<li><a href="ui_typography.html"><span class="nav-text">Typography</span></a></li>
 							<li><a href="ui_tabs_accordions.html"><span class="nav-text">Tabs & Accordions</span></a></li>
-							<li><a href="ui_modal_notification.html"><span class="nav-text">Modal & Notification</span></a></li>
+							<!-- <li><a href="ui_modal_notification.html"><span class="nav-text">Modal & Notification</span></a></li> -->
 							<li><a href="ui_card.html"><span class="nav-text">Card</span></a></li>
 							<li><a href="ui_icons.html"><span class="nav-text">Icons</span></a></li>
 						</ul>
@@ -378,6 +378,7 @@
 		<!-- END btn-scroll-top -->
 	</div>
 
+<<<<<<< HEAD
 
 	<script src="{{ asset("/assets/js/app.min.js") }}"></script>
 	<script src="assets/js/demo/dashboard.demo.js"></script>
@@ -385,3 +386,15 @@
 </body>
 
  </html>
+=======
+	<!-- END theme-panel -->
+	
+
+	@yield('page-js-files')
+    @yield('page-js-script')
+
+
+</body>
+
+</html>
+>>>>>>> b1e4bb7dc5391309e6923fcadaa7e509c99b89ec
