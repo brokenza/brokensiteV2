@@ -12,7 +12,6 @@
     <div class="col-lg-12">
         <!-- BEGIN card -->
         <div class="card m-b-15">
-                <form action="register" method="post">
             <!-- BEGIN card-header -->
             <div class="card-header card-header-inverse">
                 <h4 class="card-header-title">Form Input data user</h4>
@@ -72,19 +71,13 @@
                         </div>
                     </div>
                 </div>
-                </form>
+                
                 <div class="card-footer clearfix">
                   <!--   <span class="text-muted">Last saved on 13 Jan 2019</span> -->
-                    <button type="reset" class="btn btn-default  ml-auto btn-reset"><i class="fa fa-trash-alt"></i> Cancel</button>
+                    <button type="reset" class="btn btn-default  ml-auto"><i class="fa fa-trash-alt"></i> Cancel</button>
                     <button type="submit" class="btn btn-primary  m-l-5 btn-submit"><i class="fa fa-check"></i> Save</button>
-
-<<<<<<< HEAD
+                    </form>
             </div>
-            <!-- END card-body -->
-                </form>
-=======
-                </div>
->>>>>>> b1e4bb7dc5391309e6923fcadaa7e509c99b89ec
         </div>
   
     </div>
@@ -92,6 +85,7 @@
     <!-- BEGIN col-4 -->
 </div>
 @endsection
+
 @section('page-js-files')
 <script src="{{ asset("/assets/js/app.min.js") }}"></script>
 @stop
@@ -103,10 +97,10 @@
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
-    $(".btn-reset").click(function(e) {
+/*     $(".btn-reset").click(function(e) {
         e.preventDefault();
         document.getElementById("form_users").reset(); 
-    });
+    }); */
     $(".btn-submit").click(function(e) {
         console.log('click');
         e.preventDefault();
@@ -128,11 +122,8 @@
                     iconClass: "bg-success",
                 });
                 //reset form
-                document.getElementById("form_users").reset(); 
-/*                 setTimeout(() => {
-                    window.location.replace('./');
-                }, 2000); */
-                
+              /*   document.getElementById("form_users").reset();  */
+
             }
         });
     });
